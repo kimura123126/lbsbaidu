@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
             LatLng ll=new LatLng(location.getLatitude(),location.getLongitude());
             MapStatusUpdate update = MapStatusUpdateFactory.newLatLng(ll);
             baiduMap.animateMapStatus(update);
-            update = MapStatusUpdateFactory.zoomTo(16f);
+            update = MapStatusUpdateFactory.zoomTo(19f);
             baiduMap.animateMapStatus(update);
             isFirstLocate = false;
         }
@@ -156,7 +156,7 @@ public class MainActivity extends AppCompatActivity {
                     || location.getLocType() == BDLocation.TypeNetWorkLocation){
                 navigateTo(location);
             }
-          //  positionText.setText(currentPosition);
+            positionText.setText(currentPosition);
         }
     }
 }
